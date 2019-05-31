@@ -1,18 +1,30 @@
 {
 	"name": "jargonist",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Jargon.ist için geliştirilmiş bir komut satır arayüzü.",
+	"git": "https://github.com/volkany/jargonist.cli",
+	"homepage": "https://github.com/volkany/jargonist.cli",
 	"main": "cli.js",
 	"keywords": [
 		"jargonist"
 	],
 	"author": "Volkan Yıldız <siryildiz@gmail.com>",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/volkany/jargonist.cli"
+	},
 	"bin": {
-		"jargonist": "./cli.js"
+		"jargonist": "./cli.js",
+		"jargon": "./cli.js"
 	},
 	"dependencies": {
+		"axios": "^0.19.0",
 		"chalk": "^2.4.2",
-		"commander": "^2.20.0"
+		"cli-spinners": "^2.1.0",
+		"commander": "^2.20.0",
+		"jsdom": "^15.1.1",
+		"ora": "^3.4.0",
+		"slug": "^1.1.0"
 	}
 }
