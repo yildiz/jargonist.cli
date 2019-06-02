@@ -5,8 +5,10 @@
 	"git": "https://github.com/volkany/jargonist.cli",
 	"homepage": "https://github.com/volkany/jargonist.cli",
 	"main": "cli.js",
+	"preferGlobal": true,
 	"keywords": [
-		"jargonist"
+		"jargonist",
+		"cli"
 	],
 	"author": "Volkan Yıldız <siryildiz@gmail.com>",
 	"license": "ISC",
@@ -14,13 +16,16 @@
 		"type": "git",
 		"url": "https://github.com/volkany/jargonist.cli"
 	},
+	"scripts": {
+		"basictest": "node cli.js git && node cli.js \"remote git\" && node cli.js dizin && node cli.js notfound"
+	},
 	"bin": {
-		"jargonist": "./cli.js",
-		"jargon": "./cli.js"
+		"jargonist": "./cli.js"
 	},
 	"dependencies": {
 		"axios": "^0.19.0",
 		"chalk": "^2.4.2",
+		"cheerio": "^1.0.0-rc.3",
 		"cli-spinners": "^2.1.0",
 		"commander": "^2.20.0",
 		"jsdom": "^15.1.1",
