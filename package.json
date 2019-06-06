@@ -1,6 +1,6 @@
 {
 	"name": "jargonist",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Jargon.ist için geliştirilmiş bir komut satır arayüzü.",
 	"git": "https://github.com/volkany/jargonist.cli",
 	"homepage": "https://github.com/volkany/jargonist.cli",
@@ -28,7 +28,6 @@
 		"cheerio": "^1.0.0-rc.3",
 		"cli-spinners": "^2.1.0",
 		"commander": "^2.20.0",
-		"jsdom": "^15.1.1",
 		"ora": "^3.4.0",
 		"slug": "^1.1.0"
 	}

@@ -13,7 +13,7 @@ const BASE_URL = 'https://jargon.ist';
 const log = console.log;
 
 const CLI = {
-	version: '1.0.2'
+	version: '1.0.3'
 }
 
 let isJargonDefined = false;
@@ -56,7 +56,7 @@ const getJargon = jargon => {
 			log(`${chalk.white.bgRed.bold(' Hata: ')} "${jargon}" jargonist'te bulunmuyor, eklemek ister misin?\n\nhttps://github.com/jargonist/jargon.ist/blob/master/CONTRIBUTING.md`);
 		}else{
 			spinner.fail();
-			log('Bilinmeyen hata oluştu. Hata Kodu: '+err.response.status);
+			log('Bilinmeyen hata oluştu. HTTP Kodu: '+err.response.status);
 		}
 	}).finally(() => {
 		spinner.stop();
@@ -65,13 +65,12 @@ const getJargon = jargon => {
 
 program
 	.version(CLI.version, '-v, --version')
-	.option('-d, --debug', 'output extra debugging')
-	.option('-h, --help', 'list packages installed', { isDefault: true })
+	//.option('-d, --debug', 'output extra debugging')
 	.arguments('<keyword>')
 		.action(getJargon);
 	
 program.parse(process.argv);
 
 if(!isJargonDefined){
-	log(`${chalk.blue("Kullanım:")} jargonist <jargon>\n\njargonist -h, --help  => yardım\njargonist -a, --about => hakkında\n\nVersion: ${CLI.version}`)
+	log(`${chalk.blue("Kullanım:")} jargonist <jargon>\n\nVersiyon: ${CLI.version}`)
 }
